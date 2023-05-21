@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT APP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <img src="./icons/logo.png" alt="" width="30px">
+                <h1>whats App</h1>
+            </div>
+            <button class="hamburger" onclick="show_hide()">
+                <img src="./icons/hamburger.png" alt="" width="30px" srcset="">
+            </button>
+        </header>
+
+        <div class="container">
+            <div class="users-window">
+                <div class="users-head">
+                    <h3>People</h3>
+                    <h4 class="users-count">0</h4>
+                </div>
+                <div class="users-list">
+                </div>
+            </div>
+
+
+            <div class="chat-window">
+                <div class="chats">
+                    <!-- <div class="user-join">
+                        <p><b><strong>Vishal </strong> </b> joined the chat</p>
+                    </div> -->
+                    <!-- <div class="message incomming">
+                        <h5>Vishal :</h5>
+                        <p>Hello Nishant</p>
+                    </div>
+                    <div class="message outgoing">
+                        <h5>Nishant :</h5>
+                        <p>Welcome Vishal</p>
+                    </div> -->
+                </div>
+
+                <div class="user-input">
+                    <input id="user-msg" type="text" placeholder="Type your message...">
+                    <button id="user-send" type="button">SEND</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+
+    <script>
+        var uwindow = document.querySelector('.users-window')
+        function show_hide() {
+            if (uwindow.style.display == "block") {
+                uwindow.style.display = "none"
+            }
+            else {
+                uwindow.style.display = "block"
+            }
+        }
+    </script>
+
+    <!-- client API for connecting the server Socketio -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+
+    /* ::-webkit-scrollbar: {
+        display: none;
+    } */
+}
+
+
+.chats::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Header area start */
+
+main {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    overflow: hidden;
+    width: 80%;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.title h1 {
+    font-family: 'Baloo 2', cursive;
+    margin-left: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(64, 163, 61);
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 7px 12px;
+    display: none;
+}
+
+/* Header style area end */
+
+
+
+
+
+
+/* //container arer */
+.container {
+    background-color: darkgray;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+
+}
+
+
+
+
+
+
+/* User Window start*/
+
+.users-window {
+    background-color: rgb(90, 90, 90);
+    width: 250px;
+    border-radius: 7px;
+    margin-right: 20px;
+    color: white;
+}
+
+.users-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.users-head h3 {
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px;
+}
+
+.users-head h4 {
+    border-radius: 50%;
+    padding: 0 6px;
+    background-color: darkgrey;
+}
+
+.users-list {
+    margin: 7px 5px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    margin: 8px;
+    padding: 0 6px;
+    font-weight: 600;
+}
+
+/* user winddow end */
+
+
+
+
+
+
+
+
+
+
+/* chat window start */
+
+.chat-window {
+    width: 100%;
+    background-color: rgb(90, 90, 90);
+    border-radius: 10px;
+}
+
+.chats {
+    height: 65vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.user-join {
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: white;
+    width: max-content;
+    padding: 7px 20px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.message {
+    background-color: white;
+    padding: 5px 15px;
+    max-width: 400px;
+    margin-bottom: 10px;
+    border-radius: 10px 50px 50px 10px;
+    font-size: 25px;
+}
+
+.message p {
+    font-size: 25px;
+}
+
+.outgoing {
+    margin-left: auto;
+    border-radius: 50px 10px 10px 50px;
+    background-color: rgb(64, 163, 61);
+    color: white;
+    text-align: right;
+}
+
+/* chat window end */
+
+
+
+
+
+
+
+
+
+
+/* user message area start */
+
+.user-input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 20px;
+}
+
+.user-input input {
+    font-size: 25px;
+    background-color: white;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+    border-radius: 50px 0 0 50px;
+}
+
+.user-input button {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: rgb(11, 170, 223);
+    border-radius: 0 50px 50px 0;
+}
+
+/* user message area end */
+
+
+
+
+
+
+
+
+
+
+/* Responsive area start */
+
+@media screen and (max-width:900px) {
+    main {
+        width: 80%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .users-window {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        height: max-content;
+        z-index: 11;
+        box-shadow: 0 15px 20px -20px black;
+        padding: 0;
+        display: none;
+    }
+
+    .message {
+        max-width: 300px;
+    }
+}
+
+
+/* Responsive area end */
